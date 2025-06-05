@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "css": "^3.0.0",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
+  }
+}

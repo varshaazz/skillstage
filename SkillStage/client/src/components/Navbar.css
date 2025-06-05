@@ -1,0 +1,119 @@
+/* Base navbar styles */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  height: 64px; /* explicitly define navbar height */
+  background-color: rgba(255, 255, 255, 0.3); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* glassmorphism blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+/* Links container */
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+
+/* Link styles */
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #3b82f6;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Logout button */
+.navbar button {
+  background: transparent;
+  color: #e11d48;
+  border: 2px solid #e11d48;
+  padding: 0.3rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.navbar button:hover {
+  background-color: #e11d48;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(225, 29, 72, 0.4);
+}
+
+/* Hamburger menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px; /* match navbar height */
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    flex-direction: column;
+    width: 180px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
