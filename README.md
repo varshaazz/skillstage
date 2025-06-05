@@ -1,6 +1,11 @@
 # SkillStage
 
 SkillStage is a collaborative platform where users can share their skills, learn from others, and grow their abilities in a supportive community environment.
+A virtual open mic and skill-sharing platform to connect performers and learners.
+
+ [Live Demo on Vercel](https://skillstage-bgz3.vercel.app/)
+
+⚠️ Note: Backend is not hosted — only the login/signup UI will load. Full functionality requires the backend to run locally.
 
 ## Features
 
@@ -65,6 +70,16 @@ A simple deployment approach:
 2. Connect your GitHub repository to Vercel (or your preferred platform).
 3. Configure build commands and environment variables on the platform.
 4. Deploy and share your live URL.
+
+## Screenshots
+![home page](image-1.png)
+![signup page](image-2.png)
+![login page](image-3.png)
+![profile page](image-4.png)
+![browse skill page](image-5.png)
+![request to learn changes to withdraw request](image-6.png)
+![add skill](image-7.png)
+![my request page](image-8.png)
 
 
 ## Future Improvements
